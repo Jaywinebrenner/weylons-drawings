@@ -4,6 +4,8 @@ html {
 
 h1 {
   margin-left: 3%;
+  font-family: math;
+  font-size: 26px;
 }
 
 /* Gallery container with responsive grid layout */
@@ -38,6 +40,13 @@ h1 {
   transition: transform 0.2s ease; /* Smooth zoom-in effect on hover */
   display: block; /* Prevents unwanted space below the image */
   will-change: transform; /* Optimizes the transform operation */
+}
+
+@media screen and (max-width: 700px) {
+  .modal-image {
+    width: 100%!important;
+    height: auto;
+  }
 }
 
 /* Slight zoom on hover for interactivity */
@@ -118,5 +127,11 @@ h1 {
 @media screen and (max-width: 600px) {
   .gallery {
     grid-template-columns: 1fr; /* 1 column for mobile screens */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .gallery-image {
+    pointer-events: none;
   }
 }
