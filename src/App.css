@@ -1,0 +1,17 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 16px; /* Adjust spacing between images */
+  padding: 16px; /* Optional padding around the gallery */
+}
+
+.image-container {
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+}
+
+.image-container img {
+  width: 100%; /* Ensure images take up full container width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Removes extra space under images in some browsers */
+}

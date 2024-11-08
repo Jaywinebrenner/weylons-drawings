@@ -1,0 +1,101 @@
+html {
+  background-color: #fbf0da;
+}
+h1 {
+  margin-left: 3%;
+}
+/* Gallery container with responsive grid layout */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Ensure 4 equal columns */
+  gap: 10px;
+  padding: 20px;
+  overflow-y: auto;
+  width: calc(100% - 40px); /* Subtract padding to prevent overflow */
+  margin: 0 auto; /* Center the grid within the container */
+  box-sizing: border-box;
+}
+
+/* Image container to ensure uniformity and prevent overflow */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Prevent image from overflowing the container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Set a fixed size for thumbnails */
+.gallery-image {
+  width: 100%;
+  height: 300px; /* Fixed height for thumbnails */
+  object-fit: cover; /* Ensure the image covers the container */
+  cursor: pointer;
+  transition: transform 0.2s ease; /* Smooth zoom-in effect on hover */
+  display: block; /* Prevents unwanted space below the image */
+  will-change: transform; /* Optimizes the transform operation */
+}
+
+/* Slight zoom on hover for interactivity */
+.gallery-image:hover {
+  transform: scale(1.1); /* Zoom in, but without overflowing */
+  transform-origin: center center; /* Ensures the image scales from the center */
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  overflow: hidden; /* Prevent scrolling of the entire page */
+}
+
+/* Modal content to center the image inside */
+.modal-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 90%; /* Ensure the modal content doesn't exceed 90% of the viewport */
+  max-height: 90%; /* Ensure the modal content doesn't exceed 90% of the viewport */
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden; /* Prevent content overflow */
+}
+
+/* Make sure the modal image fits without clipping */
+.modal-image {
+  width: 50%;
+  height: auto;
+  object-fit: contain; /* Maintain aspect ratio without clipping */
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Close button in the modal */
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 60px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1100; /* Ensure the close button is above the modal content */
+}
+
+.close-modal:hover {
+  color: #ff5c5c; /* Optional: Change color on hover */
+}
