@@ -133,5 +133,7 @@ h1 {
 @media screen and (max-width: 600px) {
   .gallery-image {
     pointer-events: none;
+    width: 100%;
+    height: auto;
   }
 }
