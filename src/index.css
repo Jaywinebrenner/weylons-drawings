@@ -1,13 +1,15 @@
 html {
-  background-color: #fbf0da;
+  background-color: #f3f0ea;
 }
+
 h1 {
   margin-left: 3%;
 }
+
 /* Gallery container with responsive grid layout */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Ensure 4 equal columns */
+  grid-template-columns: repeat(4, 1fr); /* Default to 4 columns */
   gap: 10px;
   padding: 20px;
   overflow-y: auto;
@@ -98,4 +100,23 @@ h1 {
 
 .close-modal:hover {
   color: #ff5c5c; /* Optional: Change color on hover */
+}
+
+/* Responsive design: Adjust the grid for smaller screens */
+@media screen and (max-width: 1200px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr; /* 1 column for mobile screens */
+  }
 }
