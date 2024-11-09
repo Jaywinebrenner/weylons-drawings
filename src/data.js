@@ -76,7 +76,6 @@ export const data = [
 "/images/IMG_3662.webp",
 "/images/IMG_3663.webp",
 "/images/IMG_3664.webp",
-"/images/IMG_3665.webp",
 "/images/IMG_3666.webp",
 "/images/IMG_3667.webp",
 "/images/IMG_3668.webp",
